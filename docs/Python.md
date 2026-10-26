@@ -6,9 +6,12 @@ Python の `daten` は、Bridge を呼び出して Proxy を読み書きする�
 
 Python 3.9 以降を用意してください。Python 本体は Daten に含まれていません。クライアントは、インストール先の `python` フォルダーにあります。PyPI では配布していません。
 
-Daten のインストール先で、次を実行します。PYTHONPATH を設定するだけで使え、インストールやネットワーク接続は不要です。
+既定のインストール先は `%LOCALAPPDATA%\Programs\Daten`（たとえば `C:\Users\<ユーザー名>\AppData\Local\Programs\Daten`）です。`AppData` は隠しフォルダーなので、エクスプローラーでたどるより、アドレス欄に `%LOCALAPPDATA%\Programs\Daten` と入れて開くのが簡単です。
+
+PowerShell でインストール先に移動してから、次を実行します。PYTHONPATH を設定するだけで使え、インストールやネットワーク接続は不要です。インストール先を変えた場合は、1行目を実際の場所に置き換えてください。
 
 ```powershell
+cd "$env:LOCALAPPDATA\Programs\Daten"
 $env:PYTHONPATH = (Join-Path $PWD 'python')
 $env:DATEN_BRIDGE = (Join-Path $PWD 'bridge/Daten.Bridge.exe')
 & $env:DATEN_BRIDGE --api-version

@@ -4,7 +4,7 @@ Bridge は、確定した Proxy の見出しを保ったまま、神Excel との
 
 ## 1. 準備する
 
-Bridge は、インストール先の `bridge\Daten.Bridge.exe` です。インストール時に PATH への登録を選んだ場合は、`Daten.Bridge.exe` だけで起動できます。インストール前から開いていた端末は、開き直してください。登録しなかった場合は、フルパスで起動します。既定のインストール先なら、PowerShell では次のとおりです。
+Bridge は、インストール先の `bridge\Daten.Bridge.exe` です。既定のインストール先は `%LOCALAPPDATA%\Programs\Daten`（たとえば `C:\Users\<ユーザー名>\AppData\Local\Programs\Daten`）です。`AppData` は隠しフォルダーなので、エクスプローラーでたどるより、アドレス欄に `%LOCALAPPDATA%\Programs\Daten` と入れて開くのが簡単です。インストール時に PATH への登録を選んだ場合は、`Daten.Bridge.exe` だけで起動できます。インストール前から開いていた端末は、開き直してください。登録しなかった場合は、フルパスで起動します。既定のインストール先なら、PowerShell では次のとおりです。
 
 ```powershell
 & "$env:LOCALAPPDATA\Programs\Daten\bridge\Daten.Bridge.exe" --help
