@@ -134,7 +134,7 @@ proxy_to_kami(proxy_data=source, kami_template="kami.xlsx", output_kami="new-kam
 
 **数式の計算結果について**：kami-to-proxy は、神Excel の数式セルに保存されている計算結果（キャッシュ値）を Proxy に転記します。神Excel が再計算・保存済みかどうかは確認しません。実行前に神Excel を Excel で開き、Ctrl+Alt+F9 で再計算して保存してください。
 
-**再計算に関する 0.8.0 の既知の制限**：proxy-to-kami 後の神Excel と embed 後の Proxy をプログラムで読むと、数式セルから古い計算結果が返ることがあります。openpyxl で `data_only=True` を指定しても、再計算は行われません。計算結果を使う場合は、Excel で出力を開き、**Ctrl+Alt+F9（すべて再計算）** を実行して保存し直してから読んでください。詳しくは [Bridge のガイド](Bridge.md#再計算に関する-080-の既知の制限)を参照してください。
+**再計算に関する 0.8.1 の既知の制限**：proxy-to-kami 後の神Excel と embed 後の Proxy をプログラムで読むと、数式セルから古い計算結果が返ることがあります。openpyxl で `data_only=True` を指定しても、再計算は行われません。計算結果を使う場合は、Excel で出力を開き、**Ctrl+Alt+F9（すべて再計算）** を実行して保存し直してから読んでください。詳しくは [Bridge のガイド](Bridge.md#再計算に関する-081-の既知の制限)を参照してください。
 
 dry-run、上書き、管理情報の照合の省略が必要な場合は、[Bridge のガイド](Bridge.md)に従って、Bridge を直接使ってください。Python の関数には、これらの引数はありません。
 
